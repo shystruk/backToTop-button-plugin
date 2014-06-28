@@ -1,8 +1,8 @@
 {
     "name": "BackToTop",
     "version": "1.0.0",
-	"description": "Plugin which use jQuery method .ScrollTop()",
-	"author": "Vasyl Stokolosa <wystruk@ukr.net>",
+    "description": "Plugin which use jQuery method .ScrollTop()",
+    "author": "Vasyl Stokolosa <wystruk@ukr.net>",
     "license": "MIT",
     "keywords": [
         "scrollTop",
