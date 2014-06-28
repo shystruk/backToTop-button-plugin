@@ -22,19 +22,10 @@ module.exports = function(grunt) {
                 files: '<%= concat.main.src %>',
                 tasks: 'concat'
             }
-        },
-        connect: {
-            test: {
-                options: {
-                    port: 5000,
-                    base: '.'
-                }
-            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.registerTask('default', ['concat', 'uglify']);
 };
