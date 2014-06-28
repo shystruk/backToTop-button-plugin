@@ -1,0 +1,33 @@
+/* Container */
+.container {
+    height: 2500px;
+    text-align: center;
+    border: 1px solid #000;
+    font: bold 25px Arial;
+}
+
+/* Footer */
+.footer {
+    margin-top: 80px;
+    border: 1px solid #000;
+}
+
+/* Links */
+ul {
+    text-align: center;
+}
+ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+/* Back To Top */
+.back {
+    font-weight: bold;
+    cursor: pointer;
+    color: #0000FF;
+}
+.back:hover {
+    text-decoration: underline;
+    color: #000;
+}
