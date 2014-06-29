@@ -4,8 +4,8 @@ module.exports = function(grunt) {
             main: {
                 src: [
                     'js/lib/jquery.js',
-                    'js/main.js',
-                    'js/backtotop.js'
+                    'js/backtotop.js',
+                    'js/main.js'
                 ],
                 dest: 'js/grunt/scripts.js'
             }

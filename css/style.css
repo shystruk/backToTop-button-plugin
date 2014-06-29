@@ -23,6 +23,12 @@ ul li {
 
 /* Back To Top */
 .back {
+    /* necessary style fo btn*/
+    display: none;
+    position: fixed;
+    bottom: 10px; /* you may change what you want*/
+    /* end */
+
     font-weight: bold;
     cursor: pointer;
     color: #0000FF;
@@ -30,4 +36,10 @@ ul li {
 .back:hover {
     text-decoration: underline;
     color: #000;
+}
+
+/* class for plugin */
+.sticky {
+    position: absolute;
+    bottom: auto;
 }

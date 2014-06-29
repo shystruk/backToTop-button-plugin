@@ -1,9 +1,9 @@
 /*
  * Back To Top - jQuery Plugin
- * version: 1.0.0 (Fri, 14 Jun 2013)
+ * version: 1.0.0 (Sunday, June 29 2014)
  * requires jQuery v2.1.0
  *
- * License:
+ * License: MIT
  *
  * Copyright 2014 Vasyl Stokolosa - wystruk@ukr.net
  *
@@ -11,80 +11,94 @@
 
 (function ($) {
 
-    /* use strict mode */
-    'use strict';
-
-    /* variables */
-    var scrollToTop;
-
-
-    /**
-     * Scroll
-     */
-
-    function scrollWindow() {
-        $(window).scroll(function () {
-            scrollToTop = $(window).scrollTop();
-        });
-    };
-
-
-    /**
-     * Click to Button
-     * @param coordinate - coordinate top of "content"
-     * @param time - time to animation
-     */
-
-//    function clickButton(element, coordinate, time) {
-//        //check types
-//        if (typeof coordinate !== 'number' || typeof time !== 'number') {
-//            alert('ERROR \n\nUse number type for values \'coordinate\' and \'time\', please!')
-//            return false;
-//        }
-//
-//        //click to button
-//        $(element).on('click', function () {
-//            $('html,body').animate({
-//                scrollTop: coordinate
-//            }, time );
-//        });
-//    };
-
-    /**
-     * Fadeout and FadeIn Button
-     */
-
-
-    /**
-     * BackToTop
-     */
-
     $.fn.backToTop = function (options) {
-        var methods = {
-            position: 'static',
-            scrollTop: scrollWindow(),
-            clickBtn: function clickButton(element, coordinate, time) {
-                //check types
-                if (typeof coordinate !== 'number' || typeof time !== 'number') {
-                    alert('ERROR \n\nUse number type for values \'coordinate\' and \'time\', please!')
-                    return false;
-                }
 
-                //click to button
-                $(element).on('click', function () {
-                    $('html,body').animate({
-                        scrollTop: coordinate
-                    }, time );
-                });
-            }(this, 0, 400)
+        /* use strict mode */
+        'use strict';
+
+        /* variables */
+        var footer = $('#js-footer'),
+            footerHeight,
+            scrollToTop,
+            windowHeight;
+
+
+        /**
+         * Scroll
+         */
+
+//        (function () {
+//            $(window).scroll(function () {
+//                scrollToTop = $(window).scrollTop();
+//
+//                showButton();
+//
+//            });
+//        })();
+
+
+        /**
+         * Click to Button
+         * @param coordinate - coordinate top of "content"
+         * @param time - time to animation
+         */
+
+        function clickButton(element, coordinate, time) {
+            //check types
+            if (typeof coordinate !== 'number' || typeof time !== 'number') {
+                alert('ERROR \n\nUse number type for values \'coordinate\' and \'time\', please!')
+                return false;
+            }
+
+            //click to button
+            $(element).on('click', function () {
+                $('html,body').animate({
+                    scrollTop: coordinate
+                }, time );
+            });
         };
 
-        var opts = $.extend(methods, options);
+        /**
+         * FadeOut & FadeIn Button
+         *
+         */
+         function showButton(element) {
 
-//        return methods ({
-//            clickBtn: methods.clickBtn
-//        });
+            $(window).scroll(function () {
+
+                scrollToTop = $(window).scrollTop();
+                windowHeight = $(window).height();
+
+                if (scrollToTop >= windowHeight) {
+                    $(element).fadeIn();
+                } else if (scrollToTop <= windowHeight){
+                    $(element).fadeOut();
+                }
+
+                footerHeight = ( footer.length ) ? footer.offset().top : 0;
+
+                if ( scrollToTop >= footerHeight - windowHeight ) {
+                    $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is button height + space
+                } else {
+                    $(element).removeClass('sticky').css({ top: '' });
+                }
+            });
+        };
+
+
+        var methods = $.extend({
+            clickBtn: clickButton(this, 0, 400),
+            showBtn: showButton(this),
+
+            //css style
+            left: 'auto',
+            right: '20px'
+        }, options);
+
+        return this.css ({
+            left: methods.left,
+            right: methods.right
+        });
     };
-
 }(jQuery));
 

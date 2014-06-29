@@ -1,5 +1,5 @@
 jQuery(function($) {
     $('#back').backToTop({
-        position: 'absolute'
+        right: '15px'
     });
 });
