@@ -6,7 +6,7 @@ ScrollTop method by jQuery
 
 This plugin can help you to:
 - customize css and animation scroll **"Back to top"** link or image for scroll your page to top;
-- check **footer** block and corectly situat button;
+- check **footer** block and corectly allocate button relative to footer;
 - **fadeIn** and **fadeOut** button when page scroll from height what you want.
 
 #####How to use it:
@@ -19,7 +19,7 @@ You may use any *class* and *id*.<br/>
 
 2.Add basic css styles for plugin:
 ```css
-.sticky {
+.sticky { /* this class use in plugin (try to keep back the name) */
     position: absolute;
     bottom: auto;
 }
@@ -31,4 +31,34 @@ and styles for button:
   position: fixed;
 }
 ```
-3.
+
+3.Include JS files in html (you may include all files or only one compress file ***scripts.min.js***):
+```html
+<!-- JS files -->
+<script type="text/javascript" src="js/lib/jquery.js"></script>
+<script type="text/javascript" src="js/backtotop.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- compressed files by GruntJS -->
+<script type="text/javascript" src="js/grunt/scripts.min.js"></script>
+```
+
+4.Include plugin object for your button class or id:
+```javascript
+jQuery(function($) {
+    $('#back').backToTop();
+});
+```
+
+
+Information
+============
+If you have some questions, problems or improvement for this plugin create issues and we will discuss.<br/>
+Thank you!
+
+License
+========
+[MIT License](http://opensource.org/licenses/mit-license.php)
+
+
+
