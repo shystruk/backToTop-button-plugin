@@ -51,16 +51,17 @@ jQuery(function($) {
     $('#back').backToTop();
 });
 ```
+
 Properties
 ============================
-### left: ''
+### left: ' '
 you may allocate your button for left direction;
 > Examples: left: '10px'.
 
-### right
+### right: ' '
 you may allocate your button for right direction;
 
-### bottom
+### bottom: ' '
 you may allocate your button for bottom direction.
 
 
@@ -68,7 +69,6 @@ Information
 ============
 If you have some questions, problems or improvement for this plugin create issues and we will discuss.<br/>
 Thank you!
-
 License
 ========
 [MIT License](http://opensource.org/licenses/mit-license.php)
