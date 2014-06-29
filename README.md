@@ -9,8 +9,8 @@ This plugin can help you to:
 - check **footer** block and corectly allocate button relative to footer;
 - **fadeIn** and **fadeOut** button when page scroll from height what you want.
 
-#####How to use it:
-***1.***First what you should do it's create your ***Back to top*** button by text or image.<br/>
+####How to use it:
+1.First what you should do it's create your ***Back to top*** button by text or image.<br/>
 For this example we used text link:
 ```html
 <div id="back" class="back">Back To Top</div>
@@ -18,7 +18,7 @@ For this example we used text link:
 You may use any *class* and *id*.<br/>
 
 
-***2.***Add basic css styles for plugin:
+2.Add basic css styles for plugin:
 ```css
 .sticky { /* this class use in plugin (try to keep back the name) */
     position: absolute;
@@ -33,7 +33,7 @@ and styles for button:
 }
 ```
 
-***3.***Include JS files in html (you may include all files or only one compress file ***scripts.min.js***):
+3.Include JS files in html (you may include all files or only one compress file ***scripts.min.js***):
 ```html
 <!-- JS files -->
 <script type="text/javascript" src="js/lib/jquery.js"></script>
@@ -44,7 +44,7 @@ and styles for button:
 <script type="text/javascript" src="js/grunt/scripts.min.js"></script>
 ```
 
-***4.***Include plugin object for your button class or id:
+4.Include plugin object for your button class or id:
 ```javascript
 jQuery(function($) {
     $('#back').backToTop();
