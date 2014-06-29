@@ -9,7 +9,8 @@ This plugin can help you to:
 - check **footer** block and corectly allocate button relative to footer;
 - **fadeIn** and **fadeOut** button when page scroll from height what you want.
 
-####How to use it:
+How to use it:
+======================
 1.First what you should do it's create your ***Back to top*** button by text or image.<br/>
 For this example we used text link:
 ```html
