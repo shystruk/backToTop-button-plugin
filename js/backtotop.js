@@ -22,7 +22,6 @@
             scrollToTop,
             windowHeight;
 
-
         /**
          * Click to Button
          * @param coordinate - coordinate top of "content"
@@ -48,6 +47,7 @@
          * FadeOut & FadeIn Button
          *
          */
+
          function showButton(element) {
 
             //scroll
@@ -65,15 +65,14 @@
 
                 footerHeight = ( footer.length ) ? footer.offset().top : 0;
 
-                //check footer and add correct position of btn
+                //check footer and add correct position for btn
                 if ( scrollToTop >= footerHeight - windowHeight ) {
-                    $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is button height + space
+                    $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is a button height with space
                 } else {
                     $(element).removeClass('sticky').css({ top: '' });
                 }
             });
         };
-
 
         var methods = $.extend({
             clickBtn: clickButton(this, 0, 400),
@@ -93,4 +92,3 @@
         });
     };
 }(jQuery));
-

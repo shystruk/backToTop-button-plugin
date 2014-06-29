@@ -26,21 +26,6 @@
             scrollToTop,
             windowHeight;
 
-
-        /**
-         * Scroll
-         */
-
-//        (function () {
-//            $(window).scroll(function () {
-//                scrollToTop = $(window).scrollTop();
-//
-//                showButton();
-//
-//            });
-//        })();
-
-
         /**
          * Click to Button
          * @param coordinate - coordinate top of "content"
@@ -66,13 +51,16 @@
          * FadeOut & FadeIn Button
          *
          */
+
          function showButton(element) {
 
+            //scroll
             $(window).scroll(function () {
 
                 scrollToTop = $(window).scrollTop();
                 windowHeight = $(window).height();
 
+                //fadeIn & fadeOut btn
                 if (scrollToTop >= windowHeight) {
                     $(element).fadeIn();
                 } else if (scrollToTop <= windowHeight){
@@ -81,14 +69,14 @@
 
                 footerHeight = ( footer.length ) ? footer.offset().top : 0;
 
+                //check footer and add correct position for btn
                 if ( scrollToTop >= footerHeight - windowHeight ) {
-                    $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is button height + space
+                    $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is a button height with space
                 } else {
                     $(element).removeClass('sticky').css({ top: '' });
                 }
             });
         };
-
 
         var methods = $.extend({
             clickBtn: clickButton(this, 0, 400),
@@ -96,16 +84,18 @@
 
             //css style
             left: 'auto',
-            right: '20px'
+            right: '20px',
+            bottom: '10px'
+
         }, options);
 
         return this.css ({
             left: methods.left,
-            right: methods.right
+            right: methods.right,
+            bottom: methods.bottom
         });
     };
 }(jQuery));
-
 
 jQuery(function($) {
     $('#back').backToTop({
