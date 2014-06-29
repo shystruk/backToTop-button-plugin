@@ -26,7 +26,6 @@ ul li {
     /* necessary style fo btn*/
     display: none;
     position: fixed;
-    bottom: 10px; /* you may change what you want*/
     /* end */
 
     font-weight: bold;
