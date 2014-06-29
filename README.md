@@ -53,10 +53,11 @@ jQuery(function($) {
 ```
 Properties
 ============================
-***left*** - you may allocate your button for left direction;<br/>
-*Examples: left: '10px'*<br/> 
-***right*** - you may allocate your button for right direction;<br/>
-***bottom*** - you may allocate your button for bottom direction.<br/>
+###**left** - you may allocate your button for left direction;
+> Examples: left: '10px'.
+
+###**right** - you may allocate your button for right direction;
+###**bottom** - you may allocate your button for bottom direction.
 
 
 Information
