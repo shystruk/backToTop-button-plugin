@@ -12,7 +12,7 @@ This plugin can help you to:
 How to use it:
 ======================
 1.First what you should do it's create your ***Back to top*** button by text or image.<br/>
-For this example we used text link:
+For this example we used text link and allocate it outside of content (see **index.html** file):
 ```html
 <div id="back" class="back">Back To Top</div>
 ```
