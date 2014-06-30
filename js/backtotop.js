@@ -29,6 +29,9 @@
             coordinate: 0,
             time: 400,
 
+            //cancel footer height
+            footer: true,
+
             //css style
             left: 'auto',
             right: '20px',
@@ -90,7 +93,7 @@
                     footerHeight = footer.offset().top;
 
                     //check footer and add correct position for btn
-                    if ( scrollToTop >= footerHeight - windowHeight ) {
+                    if ( methods.footer === true && scrollToTop >= footerHeight - windowHeight ) {
                         $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is a button height with space
                     } else {
                         $(element).removeClass('sticky').css({ top: '' });
