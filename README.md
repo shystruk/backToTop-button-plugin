@@ -56,7 +56,7 @@ jQuery(function($) {
     $('#back').backToTop();
 });
 ```
-
+Thats all! Refresh your page and see result.
 Properties
 ============================
 ### left: ' '
