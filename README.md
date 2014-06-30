@@ -71,6 +71,9 @@ this plugin use method [.animate](http://api.jquery.com/animate/) and it has **t
 You may change speed animation what you want.
 > Default: 400
 
+## footer: true/false
+if you don't want to check footer height and allocate your button on the one place you may cancel function add **false**.
+
 ### left: ' '
 you may allocate your button for left direction;
 > Example: left: '10px'
