@@ -18,7 +18,12 @@ For this example we used text link and allocate it outside of content (see **ind
 ```
 You may use any *class* and *id*.<br/>
 
-
+Than if you want to corectly allocate button relative to footer, you should give **id** for footer:
+```html
+<div id="js-footer"> <!-- please keep back the name -->
+    ...
+</div>
+```
 2.Add basic css styles for plugin:
 ```css
 .sticky { /* this class use in plugin (try to keep back the name) */
