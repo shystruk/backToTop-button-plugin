@@ -65,7 +65,9 @@ The vertical scroll position is the same as the number of pixels that are hidden
 > Default: 0
 
 ### time: ' '
-this plugin use method [.animate](http://api.jquery.com/animate/) and it has **time** for 
+this plugin use method [.animate](http://api.jquery.com/animate/) and it has **time** value for doing ScrollTop.
+You may change speed animation what you want.
+> Default: 400
 
 ### left: ' '
 you may allocate your button for left direction;
