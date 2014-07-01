@@ -78,7 +78,7 @@ this property responsible for **height** when button show.
 
 ### takeElement: ' '
 if you want scroll top and stop on element from DOM, you may add element for this property.
-> Example: takeElement: '.js-finish-sccroll'
+> Example: takeElement: '.js-finish-scroll'
 
 ### left: ' '
 you may place your button for left direction;
