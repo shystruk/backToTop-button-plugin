@@ -12,13 +12,13 @@ This plugin can help you to:
 How to use it:
 ======================
 1.First what you should do it's create your ***Back to top*** button by text or image.<br/>
-For this example we used text link and allocate it outside of content (see **index.html** file):
+For this example we used text link and place it outside of content (see **index.html** file):
 ```html
 <div id="back" class="back">Back To Top</div>
 ```
 You may use any *class* and *id*.<br/>
 
-Than if you want to corectly allocate button relative to footer, you should give **id** for footer:
+Than if you want to corectly place button relative to footer, you should give **id** for footer:
 ```html
 <div id="js-footer"> <!-- please keep back the name -->
     ...
@@ -72,21 +72,21 @@ You may change speed animation what you want.
 > Default: 400
 
 ### footer: true/false
-if you don't want to check footer height and allocate your button on the one place you may cancel function add **false**.
+if you don't want to check footer height and place your button on the one place you may cancel function add **false**.
 
 ### showBtn: number
 this property responsible for **height** when button show.  
 > Default: button show when user scroll more window height.
 
 ### left: ' '
-you may allocate your button for left direction;
+you may place your button for left direction;
 > Example: left: '10px'
 
 ### right: ' '
-you may allocate your button for right direction;
+you may place your button for right direction;
 
 ### bottom: ' '
-you may allocate your button for bottom direction.
+you may place your button for bottom direction.
 
 
 Information
