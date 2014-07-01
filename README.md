@@ -39,15 +39,13 @@ and styles for button:
 }
 ```
 
-3.Include JS files in html (you may include all files or only one compress file ***scripts.min.js***):
+3.Include JS file in html (you may include compress file ***backtotop.min.js***):
 ```html
-<!-- JS files -->
-<script type="text/javascript" src="js/lib/jquery.js"></script>
+<!-- Plugin -->
 <script type="text/javascript" src="js/backtotop.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 
-<!-- compressed files by GruntJS -->
-<script type="text/javascript" src="js/grunt/scripts.min.js"></script>
+<!-- compressed file by GruntJS -->
+<script type="text/javascript" src="js/grunt/backtotop.min.js"></script>
 ```
 
 4.Include plugin object for your button class or id on javasript file:
@@ -78,9 +76,11 @@ if you don't want to check footer height and place your button on the one place 
 this property responsible for **height** when button show.  
 > Default: button show when user scroll more window height.
 
+> Example: showBtn: 300
+
 ### takeElement: ' '
 if you want scroll top and stop on element from DOM, you may add element for this property.
-> Example: takeElement: '.js-finish-sccroll'
+> Example: takeElement: '.js-finish-scroll'
 
 ### left: ' '
 you may place your button for left direction;
