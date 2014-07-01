@@ -78,7 +78,7 @@ if you don't want to check footer height and place your button on the one place 
 this property responsible for **height** when button show.  
 > Default: button show when user scroll more window height.
 
-### takeElement: ''
+### takeElement: ' '
 if you want scroll top and stop on element from DOM, you may add element for this property.
 > Example: takeElement: '.js-finish-sccroll'
 
