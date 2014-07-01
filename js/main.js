@@ -1,8 +1,10 @@
 jQuery(function($) {
     $('#back').backToTop({
         coordinate: 0,
-        time: 400,
+        time: 600,
+        footer: false,
+        showBtn: 300,
         right: '15px',
-        footer: true
+        bottom: '10px'
     });
 });

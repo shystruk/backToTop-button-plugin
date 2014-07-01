@@ -18,9 +18,11 @@
 
         /* variables */
         var footer = $('#js-footer'),
-            footerHeight,
+            footerCoordinates,
             scrollToTop,
+            scrollHeight,
             windowHeight,
+            correctlyHeight,
             methods;
 
         methods = $.extend({
@@ -32,10 +34,13 @@
             //cancel footer height
             footer: true,
 
+            //height when button will show
+            showBtn: 0,
+
             //css style
             left: 'auto',
-            right: '20px',
-            bottom: '10px'
+            right: 'auto',
+            bottom: 'auto'
         }, options);
 
         return $(this).each(function () {
@@ -84,17 +89,23 @@
                     windowHeight = $(window).height();
 
                     //fadeIn & fadeOut btn
-                    if (scrollToTop >= windowHeight) {
+                    scrollHeight = methods.showBtn > 0 ? methods.showBtn : $(window).height();
+                    console.log(scrollHeight, windowHeight);
+
+                    if (scrollToTop >= scrollHeight) {
                         $(element).fadeIn();
-                    } else if (scrollToTop <= windowHeight){
+                    } else if (scrollToTop <= scrollHeight){
                         $(element).fadeOut();
                     }
 
-                    footerHeight = footer.offset().top;
+                    footerCoordinates = footer.offset().top;
+
+                    //calculate correct "Height" for button position relative to footer
+                    correctlyHeight = windowHeight - scrollHeight;
 
                     //check footer and add correct position for btn
-                    if ( methods.footer === true && scrollToTop >= footerHeight - windowHeight ) {
-                        $(element).addClass('sticky').css({ top: footerHeight - 25 }); // 25 is a button height with space
+                    if ( methods.footer == true && scrollToTop >= footerCoordinates - scrollHeight - correctlyHeight ) {
+                        $(element).addClass('sticky').css({ top: footerCoordinates - 25 }); // '25' is a button height with space
                     } else {
                         $(element).removeClass('sticky').css({ top: '' });
                     }
