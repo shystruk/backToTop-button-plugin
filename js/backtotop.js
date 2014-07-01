@@ -67,7 +67,7 @@
                 $(element).on('click', function () {
 
                     //check element top coordinate
-                    toElement = methods.coordinate > 1 ? methods.coordinate : $(methods.takeElement).offset().top;
+                    toElement = methods.coordinate >= 0 ? methods.coordinate : $(methods.takeElement).offset().top;
 
                     $('html,body').animate({
                         scrollTop: toElement

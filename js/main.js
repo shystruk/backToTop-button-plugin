@@ -3,8 +3,7 @@ jQuery(function($) {
         coordinate: 0,
         time: 500,
         footer: true,
-        showBtn: 0,
-        takeElement: '.js-finish-scroll',
+        showBtn: 100,
         right: '15px',
         bottom: '10px'
     });
