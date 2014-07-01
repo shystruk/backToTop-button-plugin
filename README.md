@@ -60,14 +60,13 @@ Properties
 ### coordinate: number
 this property is responsible of method [.scrollTop](http://api.jquery.com/scrollTop/)(coordinate) - An integer indicating the new position to set the scroll bar to.<br/>
 The vertical scroll position is the same as the number of pixels that are hidden from view above the scrollable area.
-> Default: 0
 
 > Example: coordinate: 100
 
-For correct work you should chose scrollTop to properties **coordinate** or **takeElement**
+For **CONSISTENCY!!!** work you should chose scrollTop to properties **coordinate** or **takeElement**
 ***
 
-### time: number
+### timeSpeed: number
 this plugin use method [.animate](http://api.jquery.com/animate/) and it has **time** value for doing ScrollTop.
 You may change speed animation what you want.
 > Default: 400
