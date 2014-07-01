@@ -60,7 +60,6 @@ Properties
 ### coordinate: number
 this property is responsible of method [.scrollTop](http://api.jquery.com/scrollTop/)(coordinate) - An integer indicating the new position to set the scroll bar to.<br/>
 The vertical scroll position is the same as the number of pixels that are hidden from view above the scrollable area.
-> Default: 0
 
 > Example: coordinate: 100
 
