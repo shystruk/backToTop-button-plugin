@@ -75,6 +75,7 @@ if you don't want to check footer height and place your button on the one place 
 ### showBtn: number
 this property responsible for **height** when button show.  
 > Default: button show when user scroll more window height.
+
 > Example: showBtn: 300
 
 ### takeElement: ' '
