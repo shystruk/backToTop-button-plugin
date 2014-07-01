@@ -3,17 +3,14 @@ module.exports = function(grunt) {
         concat: {
             main: {
                 src: [
-                    'js/lib/jquery.js',
-                    'js/backtotop.js',
-                    'js/main.js'
-                ],
-                dest: 'js/grunt/scripts.js'
+                    'js/backtotop.js'
+                ]
             }
         },
         uglify: {
             main: {
                 files: {
-                    'js/grunt/scripts.min.js': '<%= concat.main.dest %>'
+                    'js/grunt/backtotop.min.js': '<%= concat.main.src %>'
                 }
             }
         },
