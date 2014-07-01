@@ -62,9 +62,10 @@ this property is responsible of method [.scrollTop](http://api.jquery.com/scroll
 The vertical scroll position is the same as the number of pixels that are hidden from view above the scrollable area.
 > Default: 0
 
-> #### For correct work you should chose scrollTop to **coordinate** or **takeElement** 
-
 > Example: coordinate: 100
+
+For correct work you should chose scrollTop to **coordinate** or [**takeElement**] 
+***
 
 ### time: number
 this plugin use method [.animate](http://api.jquery.com/animate/) and it has **time** value for doing ScrollTop.
