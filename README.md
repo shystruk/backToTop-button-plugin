@@ -50,10 +50,10 @@ and styles for button:
 <script type="text/javascript" src="js/grunt/scripts.min.js"></script>
 ```
 
-4.Include plugin object for your button class or id:
+4.Include plugin object for your button class or id on javasript file:
 ```javascript
 jQuery(function($) {
-    $('#back').backToTop();
+    $('.back').backToTop();
 });
 ```
 Thats all! Refresh your page and see result.
