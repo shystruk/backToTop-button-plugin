@@ -63,7 +63,7 @@ The vertical scroll position is the same as the number of pixels that are hidden
 
 > Example: coordinate: 100
 
-For **CONSISTENCY!!!** work you should chose scrollTop coordinate to properties **coordinate** or **takeElement**
+For **CONSISTENCY!!!** work you should chose scrollTop coordinate to properties **"coordinate"** or **"takeElement"**
 ***
 
 ### timeSpeed: number
