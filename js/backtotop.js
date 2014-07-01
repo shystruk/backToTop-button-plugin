@@ -29,8 +29,8 @@
         methods = $.extend({
 
             //values for .scrollTop() method
-            coordinate: 0,
-            time: 400,
+            coordinate: undefined,
+            timeSpeed: 400,
 
             //cancel footer height
             footer: true,
@@ -56,22 +56,16 @@
              */
 
             function clickButton(element) {
-                //check types
-                if (typeof methods.coordinate !== 'number' || typeof methods.time !== 'number') {
-                    alert('ERROR \n\nUse number type for values \'coordinate\' and \'time\', please!')
-                    console.log('Use number type for values \'coordinate\' and \'time\', please!')
-                    return false
-                }
 
                 //click to button
                 $(element).on('click', function () {
 
                     //check element top coordinate
-                    toElement = methods.coordinate >= 0 ? methods.coordinate : $(methods.takeElement).offset().top;
+                    toElement = methods.coordinate != undefined ? methods.coordinate : $(methods.takeElement).offset().top;
 
                     $('html,body').animate({
                         scrollTop: toElement
-                    }, methods.time );
+                    }, methods.timeSpeed );
                 });
             }clickButton(this);
 
@@ -86,7 +80,7 @@
                 //check if footer is :visible
                 if (footer.is(':visible')) {
                 } else {
-                    alert('ERROR \n\nFooter is not visible, please add id=\'js-footer\' for footer block');
+                    alert('ERROR \n\nFooter is not visible, please add id=\'js-footer\' for footer block or change element in Plugin');
                     console.log('Footer is not visible, please add id=\'js-footer\' for footer block');
                     return false;
                 };
