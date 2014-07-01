@@ -4,13 +4,14 @@ module.exports = function(grunt) {
             main: {
                 src: [
                     'js/backtotop.js'
-                ]
+                ],
+                dest: 'js/grunt/backtotop.js'
             }
         },
         uglify: {
             main: {
                 files: {
-                    'js/grunt/backtotop.min.js': '<%= concat.main.src %>'
+                    'js/grunt/backtotop.min.js': '<%= concat.main.dest %>'
                 }
             }
         },
