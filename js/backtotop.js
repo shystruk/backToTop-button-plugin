@@ -23,6 +23,7 @@
             scrollHeight,
             windowHeight,
             correctlyHeight,
+            toElement,
             methods;
 
         methods = $.extend({
@@ -36,6 +37,9 @@
 
             //height when button will show
             showBtn: 0,
+
+            //take element from DOM ( scroll stop on top this element )
+            takeElement: '',
 
             //css style
             left: 'auto',
@@ -61,8 +65,12 @@
 
                 //click to button
                 $(element).on('click', function () {
+
+                    //check element top coordinate
+                    toElement = methods.coordinate > 1 ? methods.coordinate : $(methods.takeElement).offset().top;
+
                     $('html,body').animate({
-                        scrollTop: methods.coordinate
+                        scrollTop: toElement
                     }, methods.time );
                 });
             }clickButton(this);
@@ -90,12 +98,11 @@
 
                     //fadeIn & fadeOut btn
                     scrollHeight = methods.showBtn > 0 ? methods.showBtn : $(window).height();
-                    console.log(scrollHeight, windowHeight);
 
                     if (scrollToTop >= scrollHeight) {
-                        $(element).fadeIn();
+                        $(element).fadeIn('slow');
                     } else if (scrollToTop <= scrollHeight){
-                        $(element).fadeOut();
+                        $(element).fadeOut('slow');
                     }
 
                     footerCoordinates = footer.offset().top;
