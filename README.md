@@ -67,7 +67,7 @@ The vertical scroll position is the same as the number of pixels that are hidden
 For correct work you should chose scrollTop to properties **coordinate** or **takeElement**
 ***
 
-### time: number
+### timeSpeed: number
 this plugin use method [.animate](http://api.jquery.com/animate/) and it has **time** value for doing ScrollTop.
 You may change speed animation what you want.
 > Default: 400
