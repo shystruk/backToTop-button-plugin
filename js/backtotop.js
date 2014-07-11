@@ -1,13 +1,13 @@
 /*
- * Back To Top - jQuery Plugin
- * version: 1.0.0 (Sunday, June 29 2014)
- * requires jQuery v2.1.0
- *
- * License: MIT
- *
- * Copyright 2014 Vasyl Stokolosa - wystruk@ukr.net
- *
- */
+* Back To Top - jQuery Plugin
+* version: 1.0.0 (Sunday, June 29 2014)
+* requires jQuery v2.1.0
+*
+* License: MIT
+*
+* Copyright 2014 Vasyl Stokolosa - wystruk@ukr.net
+*
+*/
 
 (function ($) {
 
