@@ -1,6 +1,6 @@
 BackToTop-by-jQuery
 ===================
-ScrollTop method by jQuery
+ScrollTop method by jQuery and scrollTo by native JavaScript
 
 ###Version 1.0.0.0
 
