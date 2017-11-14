@@ -1,8 +1,6 @@
-BackToTop-by-jQuery
+BackToTop button
 ===================
 ScrollTop method by jQuery and scrollTo by native JavaScript
-
-###Version 1.0.0.0
 
 This plugin can help you to:
 - customize css and animation scroll **"Back to top"** link or image for scroll your page to top;
@@ -56,6 +54,8 @@ jQuery(function($) {
 });
 ```
 Thats all! Refresh your page and see result.
+
+
 Properties
 ============================
 ### coordinate: number
@@ -100,6 +100,8 @@ Information
 ============
 If you have some questions, problems or improvement for this plugin create issues and we will discuss.<br/>
 Thank you!
+
+
 License
 ========
 [MIT License](http://opensource.org/licenses/mit-license.php)
