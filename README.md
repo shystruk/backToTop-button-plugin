@@ -8,6 +8,8 @@ This plugin can help you to:
 - **fadeIn** and **fadeOut** button when page scroll from height what you want;
 - if you use native(raw) JavaScript this plugin supported. You may find JS file in js/native-javascript.js
 
+![](demo/demo.gif)
+
 How to use it:
 ======================
 1.First what you should do it's create your ***Back to top*** button by text or image.<br/>
